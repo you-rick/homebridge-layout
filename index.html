@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--><!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]--><!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Home Bridge</title>
+    <meta name="description" content="Home Bridge">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet/less" type="text/css" href="stylesheets/style.less">
+    <link rel="stylesheet" type="text/css" href="stylesheets/selectbox.css">
+    <!--<link rel="stylesheet" href="stylesheets/foundation.css">-->
+    <link rel="stylesheet" href="stylesheets/app.css">
+
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,600,700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+    <script src="javascripts/less.min.js"></script>
+    <script src="javascripts/modernizr.js"></script>
+</head>
+<body>
+<script> var customStyleImgUrl = "http://theme.crumina.net/onetouch/wp-content/themes/theme_v_1.tmp/inc/custom_style/assets/img/";</script>
+<!-- Add your site or application content here -->
+<div id="main_container" class="full-width">
+<div class="container">
+    <header id="main_header">
+        <a class="logo" href="/homebridge/"><img title="Home Bridge Reality Group" alt="Home Bridge Reality Group" src="images/hb_logo.png"></a>
+
+        <h1 class="moto">Home Bridge Reality Group</h1>
+
+        <div id="right_block" class="pull-right">
+            <ul class="top-right-nav">
+                <li><a href="registration.html" title="Sign in">Sign in</a></li>
+                <li><a href="#" title="Register">Register</a></li>
+                <li><a href="#" title="Sitemap">Sitemap</a></li>
+                <li><a href="#" title="Help">Help</a></li>
+            </ul>
+        </div>
+    </header>
+</div>
+<div id="main_menu" class="full-width">
+    <nav class="container">
+        <ul class="">
+            <li><a class="home-icon" href="/homebridge/" title="Home">Home</a></li>
+            <li><a class="even-li" href="#" title="Search Listing" class="current">Search Listing</a></li>
+            <li><a href="#" title="About Us">About Us</a></li>
+            <li><a class="even-li" href="#" title="Communities">Communities</a></li>
+            <li><a href="#" title="Contact Us">Contact Us</a></li>
+        </ul>
+    </nav>
+</div>
+<div id="bg_house">
+    <div class="container">
+        <div class="small-container">
+            <section class="section-header search-title">
+                <span class="section-header-text">Use our search box to find your ideal home</span>
+            </section>
+            <div id="search_form" class="row-fluid">
+                <div class="first-line">
+                    <div class="span8">
+                        <p class="full-width"><label>Location</label></p>
+                        <input class="main-input full-width" type="text"
+                               placeholder="Address, City or ZIP Code">
+                    </div>
+                    <div class="span4">
+                        <p class="full-width"><label>Price Range</label></p>
+
+                        <div class="price-range row-fluid">
+                            <input class="main-input span5 no-margin" type="text" placeholder="$">
+                            <span class="pull-left to span2">to</span>
+                            <input class="main-input span5 no-margin" type="text" placeholder="$">
+                        </div>
+                    </div>
+                </div>
+                <div class="second-line span12">
+                    <select class="pull-left">
+                        <option>10</option>
+                        <option>20</option>
+                        <option>30</option>
+                        <option>40</option>
+                        <option>50</option>
+                        <option>60</option>
+                    </select>
+                    <span class="miles-label margin10left">Miles around your Zip Code</span>
+                    <button id="advanced-search" class="closed pull-right">Advanced search</button>
+                </div>
+                <div class="pull-left full-width margin10bottom third-line">
+                    <label class="label_check" for="check6"><span></span><input type="checkbox"
+                                                                                id="check6"/>Apartment</label>
+                    <label class="label_check" for="check7"><span></span><input type="checkbox" id="check7"/>Condominium</label>
+                    <label class="label_check" for="check8"><span></span><input type="checkbox" id="check8"/>Residential</label>
+                    <label class="label_check" for="check9"><span></span><input type="checkbox"
+                                                                                id="check9"/>Lots/Land</label>
+                </div>
+                <div class="advanced-search-form-wrap" style="display: none;">
+                    <h4 class="adv-headline">Property Types</h4>
+
+                    <div class="check-cols pull-left full-width">
+                        <div class="check-col ">
+                            <label class="label_check span11" for="check10"><span></span><input type="checkbox"
+                                                                                                id="check10"/>Townhouse</label>
+                            <label class="label_check span11" for="check11"><span></span><input type="checkbox"
+                                                                                                id="check11"/>Resort</label>
+                        </div>
+                        <div class="check-col">
+                            <label class="label_check span11" for="check12"><span></span><input type="checkbox"
+                                                                                                id="check12"/>Business</label>
+                            <label class="label_check span11" for="check13"><span></span><input type="checkbox"
+                                                                                                id="check13"/>Multy-Family</label>
+                        </div>
+                        <div class="check-col">
+                            <label class="label_check span11" for="check14"><span></span><input type="checkbox"
+                                                                                                id="check14"/>Mobile /
+                                Manufactured</label>
+                            <label class="label_check span11" for="check15"><span></span><input type="checkbox"
+                                                                                                id="check15"/>Single-Family
+                                Home</label>
+                        </div>
+                    </div>
+                    <h4 class="adv-headline">Property Details</h4>
+
+                    <div class="selectboxes">
+                        <select>
+                            <option>Bedrooms</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5+</option>
+                        </select>
+                        <select>
+                            <option>Bathrooms</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5+</option>
+                        </select>
+                        <select>
+                            <option>Square Feet</option>
+                            <option>Less than 1,000sf</option>
+                            <option>1,000sf - 3,500sf</option>
+                            <option>More than 3,500sf</option>
+                        </select>
+                        <select>
+                            <option>Lot size</option>
+                            <option>Less that 1 Acre</option>
+                            <option>1 - 5 Acres</option>
+                            <option>5+ Acres</option>
+                        </select>
+                        <select>
+                            <option>Year Build</option>
+                            <option>Any Age</option>
+                            <option>less than 2 years</option>
+                            <option>2-5 years</option>
+                            <option>6-10 years</option>
+                            <option>11+ years</option>
+                        </select>
+                    </div>
+                    <h4 class="adv-headline">Results Display</h4>
+
+                    <div class="full-width pull-left">
+                        <label class="label_check results-display" for="check1"><span></span><input type="checkbox"
+                                                                                                    id="check1"/>New
+                            listing</label>
+                        <label class="label_check results-display" for="check2"><span></span><input type="checkbox"
+                                                                                                    id="check2"/>Open
+                            houses</label>
+                        <label class="label_check results-display" for="check3"><span></span><input type="checkbox"
+                                                                                                    id="check3"/>Price
+                            cuts</label>
+                        <label class="label_check results-display" for="check4"><span></span><input type="checkbox"
+                                                                                                    id="check4"/>Luxury
+                            homes</label>
+                        <label class="label_check results-display" for="check5"><span></span><input type="checkbox"
+                                                                                                    id="check5"/>Virtual
+                            homes</label>
+                    </div>
+                </div>
+                <div class="search-btn-wrap full-width">
+                    <button class="subscribe-input-submit main-input search-homes-btn">Search homes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="subscribe_block">
+    <div class="container">
+        <div class="subscribe-text pull-left">
+            <p class="subscribe-text-1">Get the Latest and Greatest before anyone else!</p>
+
+            <p class="subscribe-text-2">Consequat ipsum, nec sagittis sem nibh id elit.</p>
+        </div>
+        <div class="pull-right">
+            <input type="text" placeholder="Enter your email address"
+                   class="subscribe-input-text pull-left main-input">
+            <button class="subscribe-input-submit pull-right main-input">Subscribe</button>
+        </div>
+    </div>
+</div>
+<div id="main_section" class="full-width">
+<div class="container gallery-blog-container">
+<div id="houses" class="pull-left">
+    <section class="section-header featured-title pull-left">
+        <span>Featured Properties</span>
+    </section>
+    <div id="gallery" class="full-width pull-left">
+        <div id="body-wrapper">
+            <div id="aq-block-2" class="aq-block aq-block-aq_hslider_posts_block fifteen columns aq-first cf">
+                <div class="wrap" style="">
+                    <div tabindex="5000" style="width: 96%; height: 58%;" class="scroll-box"
+                         data-boxed="3">
+                        <div class="grid">
+                            <div class="gr-box">
+                                <div class="item half even">
+                                    <img src="images/house2.png" style="margin:0 0;"
+                                         alt="House 1"
+                                         title="House 1">
+
+                                    <div class="description disp">
+                                        <h4>39 Hornbeck Rdg</h4>
+
+                                        <div class="house-adress">Poughkeepsie, NY 12603</div>
+                                        <div class="cost-details">
+                                            <ul>
+                                                <li>4 bd</li>
+                                                <li>4 ba</li>
+                                                <li>4,785 sqft.</li>
+                                            </ul>
+                                            <p>$256,000</p>
+                                        </div>
+                                    </div>
+                                    <a href="javascript:"></a>
+                                </div>
+                                <div class="item half odd">
+                                    <img src="images/house1.png" style="margin:0 0;"
+                                         alt="House 1"
+                                         title="House 1">
+
+                                    <div class="description disp">
+                                        <h4>39 Hornbeck Rdg</h4>
+
+                                        <div class="house-adress">Poughkeepsie, NY 12603</div>
+                                        <div class="cost-details">
+                                            <ul>
+                                                <li>4 bd</li>
+                                                <li>4 ba</li>
+                                                <li>4,785 sqft.</li>
+                                            </ul>
+                                            <p>$256,000</p>
+                                        </div>
+                                    </div>
+                                    <a href="javascript:"></a>
+                                </div>
+                                <div class="item half even">
+                                    <img src="images/house2.png" style="margin:0 0;"
+                                         alt="House 1"
+                                         title="House 1">
+
+                                    <div class="description disp">
+                                        <h4>39 Hornbeck Rdg</h4>
+
+                                        <div class="house-adress">Poughkeepsie, NY 12603</div>
+                                        <div class="cost-details">
+                                            <ul>
+                                                <li>4 bd</li>
+                                                <li>4 ba</li>
+                                                <li>4,785 sqft.</li>
+                                            </ul>
+                                            <p>$256,000</p>
+                                        </div>
+                                    </div>
+                                    <a href="javascript:"></a>
+                                </div>
+                                <div class="item half odd">
+                                    <img src="images/house1.png" style="margin:0 0;"
+                                         alt="House 1"
+                                         title="House 1">
+
+                                    <div class="description disp">
+                                        <h4>39 Hornbeck Rdg</h4>
+
+                                        <div class="house-adress">Poughkeepsie, NY 12603</div>
+                                        <div class="cost-details">
+                                            <ul>
+                                                <li>4 bd</li>
+                                                <li>4 ba</li>
+                                                <li>4,785 sqft.</li>
+                                            </ul>
+                                            <p>$256,000</p>
+                                        </div>
+                                    </div>
+                                    <a href="javascript:"></a>
+                                </div>
+                            </div>
+                            <div class="gr-box">
+                                <div class="item half odd">
+                                    <img src="images/house1.png" style="margin:0 0;"
+                                         alt="House 1"
+                                         title="House 1">
+
+                                    <div class="description disp">
+                                        <h4>39 Hornbeck Rdg</h4>
+
+                                        <div class="house-adress">Poughkeepsie, NY 12603</div>
+                                        <div class="cost-details">
+                                            <ul>
+                                                <li>4 bd</li>
+                                                <li>4 ba</li>
+                                                <li>4,785 sqft.</li>
+                                            </ul>
+                                            <p>$256,000</p>
+                                        </div>
+                                    </div>
+                                    <a href="javascript:"></a>
+                                </div>
+                                <div class="item half even">
+                                    <img src="images/house1.png" style="margin:0 0;"
+                                         alt="House 1"
+                                         title="House 1">
+
+                                    <div class="description disp">
+                                        <h4>39 Hornbeck Rdg</h4>
+
+                                        <div class="house-adress">Poughkeepsie, NY 12603</div>
+                                        <div class="cost-details">
+                                            <ul>
+                                                <li>4 bd</li>
+                                                <li>4 ba</li>
+                                                <li>4,785 sqft.</li>
+                                            </ul>
+                                            <p>$256,000</p>
+                                        </div>
+                                    </div>
+                                    <a href="javascript:"></a>
+                                </div>
+                                <div class="item half odd">
+                                    <img src="images/house2.png" style="margin:0 0;"
+                                         alt="House 1"
+                                         title="House 1">
+
+                                    <div class="description disp">
+                                        <h4>39 Hornbeck Rdg</h4>
+
+                                        <div class="house-adress">Poughkeepsie, NY 12603</div>
+                                        <div class="cost-details">
+                                            <ul>
+                                                <li>4 bd</li>
+                                                <li>4 ba</li>
+                                                <li>4,785 sqft.</li>
+                                            </ul>
+                                            <p>$256,000</p>
+                                        </div>
+                                    </div>
+                                    <a href="javascript:"></a>
+                                </div>
+                                <div class="item half even">
+                                    <img src="images/house2.png" style="margin:0 0;"
+                                         alt="House 1"
+                                         title="House 1">
+
+                                    <div class="description disp">
+                                        <h4>39 Hornbeck Rdg</h4>
+
+                                        <div class="house-adress">Poughkeepsie, NY 12603</div>
+                                        <div class="cost-details">
+                                            <ul>
+                                                <li>4 bd</li>
+                                                <li>4 ba</li>
+                                                <li>4,785 sqft.</li>
+                                            </ul>
+                                            <p>$256,000</p>
+                                        </div>
+                                    </div>
+                                    <a href="javascript:"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="blog" class="pull-right">
+    <section class="section-header blog-title pull-left">
+        <span>Latest from Our Blog</span>
+    </section>
+    <ul class="nav nav-tabs-blog nav-tabs pull-right full-width">
+        <li class="active"><a href="#popular" data-toggle="tab" class="popular-tab">Popular <i
+                class="icon-chevron-down icon-white icon-chevron"></i></a>
+        </li>
+        <li><a href="#recent" data-toggle="tab" class="recent-tab">Recent <i
+                class="icon-chevron-down icon-white icon-chevron"></i></a>
+        </li>
+    </ul>
+    <div class="tab-content pull-left">
+        <div class="tab-pane active" id="popular">
+            <div class="widget-inner">
+                <article class="mini date">
+                    <time datetime="2012-12-06T10:29:53+00:00">
+                        <span class="day">06</span>
+                        <span class="mounth">Dec.</span>
+                        <span class="time">10:29 am</span>
+                    </time>
+                    <div class="entry-content">
+                        <a href="http://theme.crumina.net/onetouch/meet-lamar-smith-sopa-author-climate-change-skeptic-and-congress-next-science-boss/"
+                           class="title">Meet Joann Davidson: photomodel, athlete, excellent wife and
+                            beautiful
+                            woman</a>
+
+                        <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi
+                            ut
+                            mi.
+                            Nullam enim leo, egestas id, condimentum at,... ... </p>
+                    </div>
+                </article>
+                <article class="mini date">
+                    <time datetime="2012-12-06T10:28:54+00:00">
+                        <span class="day">06</span>
+                        <span class="mounth">Dec.</span>
+                        <span class="time">10:28 am</span>
+                    </time>
+                    <div class="entry-content">
+                        <a href="http://theme.crumina.net/onetouch/video-post-example-not-in-slider/"
+                           class="title">Video post example (not in slider)</a>
+
+                        <p> http://vimeo.com/35396305
+
+                            &nbsp;
+
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi
+                            ut
+                            mi.
+                            Nullam enim leo, egestas id, condimentum at,... ... </p>
+                    </div>
+                </article>
+                <article class="mini date">
+                    <time datetime="2012-12-05T14:02:09+00:00">
+                        <span class="day">05</span>
+                        <span class="mounth">Dec.</span>
+                        <span class="time">2:02 pm</span>
+                    </time>
+                    <div class="entry-content">
+                        <a href="http://theme.crumina.net/onetouch/gallery-post-example-not-in-slider/"
+                           class="title">Gallery post example (Not in slider)</a>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi
+                            ut
+                            mi.
+                            Nullam enim leo, egestas id, condimentum at,... ... </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="tab-pane" id="recent">
+            <div class="widget-inner">
+                <article class="mini date">
+                    <time datetime="2012-12-06T10:29:53+00:00">
+                        <span class="day">10</span>
+                        <span class="mounth">May</span>
+                        <span class="time">07:29 am</span>
+                    </time>
+                    <div class="entry-content">
+                        <a href="http://theme.crumina.net/onetouch/meet-lamar-smith-sopa-author-climate-change-skeptic-and-congress-next-science-boss/"
+                           class="title">April's real estate market report for Staten Island.</a>
+
+                        <p> Proin gravida nibh vel velit auctor aliquet. Aene an sollicitudin,
+                            lorem quis bibendum auctor, nisi elit consequat ipsum.</p>
+                    </div>
+                </article>
+                <article class="mini date">
+                    <time datetime="2012-12-06T10:28:54+00:00">
+                        <span class="day">10</span>
+                        <span class="mounth">Aug</span>
+                        <span class="time">00:28 am</span>
+                    </time>
+                    <div class="entry-content">
+                        <a href="http://theme.crumina.net/onetouch/video-post-example-not-in-slider/"
+                           class="title">Video post example </a>
+
+                        <p>Proin gravida nibh vel velit auctor aliquet. Aene an sollicitudin,
+                            lorem quis bibendum auctor, nisi elit consequat ipsum.Proin gravida nibh vel velit
+                            auctor aliquet. Aene an sollicitudin, lorem quis bibendum auctor, nisi elit consequat
+                            ipsum.</p>
+                    </div>
+                </article>
+                <article class="mini date">
+                    <time datetime="2012-12-05T14:02:09+00:00">
+                        <span class="day">05</span>
+                        <span class="mounth">Dec.</span>
+                        <span class="time">2:02 pm</span>
+                    </time>
+                    <div class="entry-content">
+                        <a href="http://theme.crumina.net/onetouch/gallery-post-example-not-in-slider/"
+                           class="title">Gallery post example (Not in slider)</a>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi
+                            ut
+                            mi.
+                            Nullam enim leo, egestas id, condimentum at,... ... </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<footer class="full-width pull-left">
+    <div class="container">
+        <div class="homes-for-sale big-column pull-left">
+            <p class="footer-title">Homes for Sale</p>
+
+            <div class="homes-description">Homebridgerealty.com is where your home search begins. Search over 3 million homes for sale or rent on Homebridgerealty.com, including new homes, apartments for rent, homes for rent, condos, townhouses, and more. Plus, Homes.com provides you with a wealth of real estate information to help you learn more about finding your perfect home. Whether you are looking for a real estate agent to help you buy or sell a home, mortgage rates, curious about the home values
+            </div>
+        </div>
+        <div class="related-services small-column pull-left">
+            <p class="footer-title">Related Services</p>
+            <ul class="related-links">
+                <li><a href="#">Apartments for Rent</a></li>
+                <li><a href="#">Senior Housing</a></li>
+                <li><a href="#">Corporate Housing</a></li>
+                <li><a href="#">Para Rentar</a></li>
+                <li><a href="#">Real Estate Search</a></li>
+                <li><a href="#">Real Estate Agents</a></li>
+                <li><a href="#">Find a Mover</a></li>
+            </ul>
+        </div>
+        <div class="products-support small-column pull-left">
+            <p class="footer-title">Products & Support</p>
+            <ul>
+                <li><a href="#">Real Estate Marketing</a></li>
+                <li><a href="#">Listing Exposure</a></li>
+                <li><a href="#">Real Estate Websites</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Advertising</a></li>
+                <li><a href="#">Customer Support</a></li>
+                <li><a href="#">Send Us Feedback</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">Widgets</a></li>
+            </ul>
+        </div>
+        <div class="contact-us mid-column">
+            <p class="footer-title pull-left">Contact Us</p>
+            <input class="footer-input pull-left full-width main-input" type="text" placeholder="Email *">
+            <textarea class="footer-textarea pull-left contact-us-textarea full-width"
+                      placeholder="Your Message *"></textarea>
+            <button class="margin10top subscribe-input-submit main-input search-homes-btn pull-right">Search homes</button>
+        </div>
+        <div class="qr-code">
+            <img src="images/qr_code.png" class="pull-left">
+
+            <div class="pull-left qr-code-text-block">
+                <p class="qr-code-p1">Quick response</p>
+
+                <p class="qr-code-p2">Code</p>
+
+                <p class="qr-code-p3">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+    </div>
+    <hr class="full-width">
+    <div class="container margin10bottom">
+        <div class="rights-reserved pull-left">
+            &copy; 2013. Homebridge Realty Group. All Rights Reserved.
+        </div>
+        <div class="social-btns pull-right">
+            <a class="facebook" href="#" alt="facebook" title="Facebook"></a>
+            <a class="twitter" href="#" alt="twitter" title="Twitter"></a>
+            <a class="google" href="#" alt="google+" title="Google+"></a>
+            <a class="rss" href="#" alt="rss" title="Rss"></a>
+        </div>
+    </div>
+</footer>
+</div>
+<script src="javascripts/jquery-1.10.1.min.js"></script>
+<script src="javascripts/bootstrap.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.selectboxit/3.5.0/jquery.selectBoxIt.min.js"></script>
+<script src="javascripts/main.js"></script>
+</body>
+</html>

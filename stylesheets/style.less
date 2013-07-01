@@ -1,0 +1,1026 @@
+@import 'bootstrap/bootstrap';
+@import 'selectbox.css';
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video { //  margin: 0;
+  padding: 0; //  border: 0;
+  //  font-size: 100%;
+  //  font: inherit;
+  //  vertical-align: baseline;
+}
+
+//Classes
+.no-border {
+  border-style: none;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.margin10top {
+  margin-top: 10px !important;
+}
+
+.margin10bottom {
+  margin-bottom: 10px;
+}
+
+.margin10right {
+  margin-right: 10px;
+}
+
+.margin10left {
+  margin-left: 10px;
+}
+
+// Custom reset styles
+body {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+textarea {
+  font-family: @baseFontFamily;
+}
+
+ul {
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+fieldset {
+  border: 0;
+  padding: 10px;
+}
+
+input {
+  font-family: @baseFontFamily;
+}
+
+label, .label {
+  display: block;
+  cursor: default;
+}
+
+h3 {
+  font-weight: 300;
+}
+
+// Main styles
+#main_container {
+  .box-sizing(border-box);
+  overflow: hidden;
+  @media only screen and (max-width: 767px) {
+    padding: 10px;
+  }
+}
+
+.logo {
+  margin-top: 10px;
+  @media only screen and (max-width: 627px) {
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+  }
+}
+
+#main_header {
+  padding-top: 10px;
+  position: relative;
+  margin-bottom: 5px;
+  .moto {
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    overflow: hidden;
+  }
+}
+
+#right_block {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  @media only screen and (max-width: 767px) {
+    top: 3px;
+  }
+  ul.top-right-nav {
+    li {
+      display: inline;
+      border-left: 1px solid #333;
+      padding: 0px 7px;
+      float: left;
+      line-height: 14px;
+      &:first-child {
+        border: none !important;
+      }
+      &last-child {
+        padding-right: 3px !important;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+      a {
+        color: @blackLight;
+        text-decoration: none;
+        font-size: @fontSizeBelowAv;
+      }
+    }
+  }
+}
+
+#main_menu {
+  background: @blueMenu;
+  margin-top: 20px;
+  ul {
+    padding: 0;
+    li {
+      list-style-type: none;
+      display: inline;
+      a {
+        color: @white;
+        text-decoration: none;
+        font-size: @fontSizeMid;
+        float: left;
+        padding: 25px 23px;
+        @media only screen and (max-width: 680px) {
+          width: 100% !important;
+          box-sizing: border-box;
+          text-align: center;
+          padding: 25px 0;
+        }
+        &:hover {
+          background-color: @blueSearchForm !important;
+        }
+        &.home-icon {
+          background: url(../images/home_icon.png) no-repeat center;
+          padding-left: 43px;
+          padding-right: 43px;
+          text-indent: -9999px;
+          @media only screen and (max-width: 767px) {
+            text-indent: 0px;
+            background: none;
+            padding: 25px 20px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.even-li {
+  @media only screen and (max-width: 680px) {
+    background-color: @blue;
+  }
+}
+
+.icon-chevron {
+  margin: 4px 0 0 5px;
+}
+
+#bg_house {
+  background: url(../images/grass_bg2.png) no-repeat bottom center;
+  min-height: 410px;
+  background-size: auto auto;
+}
+
+.small-container { //  width: 790px;
+  width: 65%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 40px;
+  @media only screen and (max-width: 980px) {
+    margin: 0 !important;
+    width: 96% !important;
+  }
+}
+
+#search_form {
+  background-color: @blueSearchForm;
+  color: @white;
+  border: 10px solid rgba(75, 183, 255, 0.6);
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box; //  max-width: 790px;
+  //  min-height: 225px;
+}
+
+#search_form label {
+  font-size: @fontSizeBelowAv;
+}
+
+.section-header {
+  font-size: @fontSizeBelowLarge;
+  background-position: 10px 30px;
+  padding-left: 60px !important;
+  font-weight: 300;
+}
+
+.search-title {
+  padding: 37px 0 30px 10px;
+  color: @white;
+  background: url(../images/search_icon.png) no-repeat 3px 30px;
+  line-height: 1.1;
+  @media only screen and (max-width: 767px) {
+    background-position: 8px 45px;
+  }
+}
+
+#subscribe_block {
+  background-color: @blueSearchForm;
+  min-height: 70px;
+  padding: 0 10px;
+  .box-sizing(border-box);
+}
+
+.mid-icon {
+  margin-top: 20px;
+}
+
+.subscribe-text {
+  color: @white;
+  margin-top: 15px;
+  padding-left: 60px;
+  background: url(../images/email_icon.png) no-repeat left 7px;
+  @media only screen and (max-width: 767px) {
+    padding: 5px;
+    background: none;
+  }
+}
+
+.subscribe-text-1 {
+  font-size: @fontSizeMid;
+}
+
+.subscribe-input-text {
+  margin-top: 20px;
+  width: auto;
+  min-width: 260px;
+  background-color: #FFF !important;
+  @media only screen and (max-width: 980px) {
+    margin-bottom: 10px;
+  }
+  @media only screen and (max-width: 767px) {
+    width: 96% !important;
+    float: right;
+    padding-right: 10px !important;
+    margin: 0 10px 10px 10px !important;
+  }
+}
+
+.subscribe-input-submit {
+  line-height: 35px;
+  font-size: @fontSizeSmall;
+  color: @white;
+  background-color: @blueButton;
+  margin-top: 20px;
+  margin-left: 10px;
+  height: 35px !important;
+  min-width: 165px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  &:hover {
+    background: @blueMenu;
+  }
+}
+
+#main_section {
+  background-color: @white;
+}
+
+.gallery-blog-container {
+  margin-top: 30px;
+}
+
+.featured-title {
+  padding: 23px 0 20px 0;
+  color: @grayDark;
+  background: url(../images/featured_icon.png) no-repeat left 15px;
+  margin-bottom: 8px;
+}
+
+.blog-title {
+  padding: 23px 0 20px 0;
+  color: @grayDark;
+  background: url(../images/blog_icon.png) no-repeat left 15px;
+  margin-bottom: 8px;
+}
+
+#houses {
+  width: 60%;
+  @media only screen and (max-width: 980px) {
+    width: auto !important;
+    float: none;
+  }
+}
+
+#blog {
+  width: 35%;
+  padding-bottom: 10px;
+  @media only screen and (max-width: 980px) {
+    width: auto !important;
+    float: none;
+  }
+}
+
+.grid {
+  width: 900px;
+}
+
+// TABS
+.nav-tabs {
+  border-bottom: 0;
+}
+
+.nav-tabs > li > a,
+.nav-pills > li > a {
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-right: 0;
+  line-height: 14px; // keeps the overall height an even number
+}
+
+// Actual tabs (as links)
+.nav-tabs-blog {
+  @media only screen and (max-width: 767px) {
+    width: 100%;
+  }
+}
+
+.nav-tabs-blog > li > a {
+  font-size: @fontSizeMid;
+  padding-top: 20px !important;
+  height: 35px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  line-height: @baseLineHeight;
+  background-color: @blueButton;
+  color: @white;
+  border: 0;
+  @media only screen and (max-width: 767px) {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 !important;
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    text-indent: 20px;
+  }
+  .border-radius(0);
+  &:hover,
+  &:focus {
+    border-color: @blueDark;
+    color: @white;
+    background-color: @blueSearchForm;
+    border: 0;
+  }
+}
+
+.nav-tabs-blog > li {
+  width: 50%;
+  @media only screen and (max-width: 767px) {
+    width: 50%;
+  }
+}
+
+// Active state, and it's :hover/:focus to override normal :hover/:focus
+.nav-tabs-blog > .active > a,
+.nav-tabs-blog > .active > a:hover,
+.nav-tabs-blog > .active > a:focus {
+  color: @white;
+  background-color: @blueMenu;
+  border: 0;
+  cursor: default;
+}
+
+.post-content {
+  padding-bottom: 20px;
+}
+
+.popular-tab {
+  background: url(../images/popular_icon.png) no-repeat 95% center;
+}
+
+.recent-tab {
+  background: url(../images/recent_icon.png) no-repeat 95% center;
+}
+
+footer {
+  background-color: @footerBackground;
+  color: @white;
+  padding-top: 25px;
+}
+
+footer .container > div {
+  margin-right: 5%;
+}
+
+.homes-for-sale {
+  width: 30%;
+}
+
+.homes-description {
+  font-size: @fontSizeSmall;
+}
+
+.footer-title {
+  font-size: 15.1px;
+}
+
+.related-services {
+  width: 12%;
+}
+
+.related-services a, .products-support a {
+  font-size: @fontSizeSmall;
+  color: @white;
+  border-bottom: 1px dotted #A2A2A2;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.footer-input {
+  font-size: @fontSizeSmall;
+  .box-sizing(border-box);
+}
+
+.product-support {
+  width: 12%;
+}
+
+.contact-us {
+  width: 29%;
+  float: right;
+  margin-right: 0 !important;
+  @media only screen and (max-width: 767px) {
+    //    float: right !important;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+}
+
+.footer-textarea {
+  font-size: @fontSizeSmall;
+  border: 0 !important;
+  padding: 4px 6px 6px 5px !important;
+  outline: 0;
+  border-radius: 0 !important;
+  .box-sizing(border-box);
+}
+
+.contact-us-textarea {
+  min-height: 140px;
+  margin-top: 15px;
+}
+
+.qr-code {
+  float: left;
+  width: 80%;
+  margin-top: -35px;
+  @media only screen and (max-width: 767px) {
+    padding: 10px;
+    margin: 0;
+  }
+}
+
+.qr-code-text-block {
+  line-height: 15px;
+  margin-left: 10px;
+}
+
+.qr-code-p1 {
+  font-size: @fontSizeLarge;
+  font-family: @quickSand;
+}
+
+.qr-code-p2 {
+  font-size: @fontSizeExtraLarge;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+  font-family: @juliusSans;
+}
+
+.qr-code-p3 {
+  font-size: @fontSizeSmall;
+  font-style: italic;
+}
+
+.big-column {
+  @media only screen and (max-width: 980px) {
+    float: none !important;
+    width: auto !important;
+    padding: 10px;
+  }
+}
+
+.mid-column {
+  @media only screen and (max-width: 980px) {
+    //    float: none !important;
+    width: 30% !important;
+    padding: 10px;
+  }
+  @media only screen and (max-width: 767px) {
+    //    float: none !important;
+    width: 100% !important;
+    padding: 10px;
+  }
+}
+
+.small-column {
+  @media only screen and (max-width: 980px) {
+    //    float: none !important;
+    width: 20% !important;
+    padding: 10px;
+  }
+  @media only screen and (max-width: 767px) {
+    //    float: none !important;
+    //    width: 40% !important;
+    width: auto !important;
+    padding: 10px;
+  }
+}
+
+.main-input {
+  border: 0 !important;
+  padding: 4px 6px 6px 5px !important;
+  outline: 0;
+  border-radius: 0 !important;
+  min-height: 35px !important;
+  .box-sizing(border-box);
+}
+
+.price-range {
+  float: right;
+  @media only screen and (max-width: 767px) {
+    width: 100%;
+  }
+}
+
+.price-range input {
+  width: 48%;
+  margin: 4%;
+  @media only screen and (max-width: 767px) {
+    width: 48% !important;
+    float: left !important;
+  }
+}
+
+.to {
+  text-align: center;
+  margin: 5px;
+  width: 4%;
+  @media only screen and (max-width: 767px) {
+    visibility: hidden;
+    margin: 0;
+    float: left !important;
+    width: 4% !important;
+  }
+}
+
+#subscribe_block .subscribe-input-submit {
+  @media only screen and (max-width: 767px) {
+    margin-bottom: 10px;
+    margin-top: 0;
+    float: right;
+    margin-right: 10px;
+  }
+}
+
+.selectboxit-default-arrow {
+  border: 0 !important;
+  width: 11px !important;
+  height: 8px !important;
+  background: url(../images/selectbox-arrow.png) no-repeat center;
+  top: 40% !important;
+}
+
+.miles-label {
+  color: @white;
+  line-height: 1.8;
+}
+
+#advanced-search {
+  background: none;
+  border: 0;
+  color: @white;
+  background: url(../images/advanced_search.png) no-repeat top right;
+  font-size: 13.5px;
+  padding: 4px 30px 7px 0px;
+}
+
+#advanced-search:hover {
+  text-decoration: underline;
+}
+
+#advanced-search.closed {
+  background: url(../images/advanced_search_open.png) no-repeat top right;
+}
+
+.advanced-search-form-wrap {
+  background: @blueAdvancedSearch;
+  float: left;
+  padding: 0 20px 20px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  .selectboxit-container .selectboxit-options {
+    top: -1px !important;
+  }
+  .label_check {
+    min-height: 25px !important;
+  }
+}
+
+.search-btn-wrap {
+  clear: both;
+  padding: 10px 0;
+  margin: 0 0 5px 0;
+  border-top: 1px solid @blueAdvancedSearch;
+  float: left;
+}
+
+.search-btn {
+  display: block;
+  margin: 15px auto;
+  height: 35px;
+  width: 165px;
+  color: #fff;
+  background: @blueButton;
+  font-size: 12px;
+  text-align: center;
+  line-height: 35px;
+  text-transform: uppercase;
+  border: 0;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.search-btn:hover {
+  background: @blueMenu;
+}
+
+.first-line {
+  padding: 10px 20px;
+  label {
+    font-size: @baseFontSize !important;
+    @media only screen and (max-width: 627px) {
+      margin-top: 5px;
+    }
+  }
+}
+
+.second-line {
+  margin-left: 0 !important;
+  padding: 10px 20px;
+  float: left !important;
+}
+
+.third-line {
+  padding: 5px 20px;
+}
+
+  /*--------------styles for Jquery Checkbox's and Radio Buttons-------*/
+.label_check {
+  padding-left: 0px;
+  float: left;
+  margin-left: 0 !important;
+  cursor: pointer;
+}
+
+.label_check span {
+  width: 12px;
+  height: 12px;
+  float: left;
+  margin-top: 4px;
+  margin-right: 7px;
+  background: url(../images/checkbox-bg.png) no-repeat top left;
+}
+
+.label_check span.c_on {
+  background: url(../images/checkbox-bg.png) no-repeat bottom left;
+}
+
+.label_check input {
+  position: absolute;
+  left: -9999px;
+}
+
+.check-col {
+  float: left;
+  padding-left: 20px;
+  width: 28%;
+  @media only screen and (max-width: 980px) {
+    width: 45% !important;
+  }
+  @media only screen and (max-width: 767px) {
+    width: auto !important;
+  }
+
+}
+
+.nice-check {
+  float: left;
+  margin-right: 20px;
+  font-size: 15px;
+}
+
+.nice-check:last-child {
+  margin-right: 0;
+}
+
+.nice-check input {
+  float: left;
+  margin-right: 10px;
+}
+
+.check-cols .label_check {
+  clear: both;
+}
+
+.adv-headline {
+  color: @white;
+  font-size: @baseFontSize;
+  font-weight: normal;
+  float: left;
+  width: 100%;
+  margin: 15px 0;
+}
+
+.checkbox-col {
+  width: 200px;
+  float: left;
+  margin-left: 22px;
+}
+
+.third-line .label_check {
+  margin: 0 17px 0 0;
+}
+
+.results-display {
+  width: 17%;
+  float: left;
+  padding-left: 20px;
+  @media only screen and (max-width: 980px) {
+    width: 30% !important;
+  }
+  @media only screen and (max-width: 767px) {
+    width: auto !important;
+  }
+}
+
+.form-bg-container {
+  float: left;
+  width: 100%;
+  background: url(../images/grass_bg2.png) repeat-x bottom center;
+  border-top: 62px solid #0164a7;
+  margin-top: -62px;
+  border-bottom: 72px solid #0080d6;
+  margin-bottom: -74px;
+}
+
+.search-homes-btn {
+  margin: auto;
+  display: block;
+}
+
+.rights-reserved {
+  font-size: @fontSizeSmall;
+  @media only screen and (max-width: 767px) {
+    padding-left: 10px;
+  }
+}
+
+.social-btns {
+  margin: 0 !important;
+  @media only screen and (max-width: 980px) {
+    margin-right: 10px !important;
+  }
+}
+
+.social-btns a {
+  width: 41px;
+  height: 41px;
+  float: left;
+  display: block;
+}
+
+.facebook {
+  margin-right: 10px;
+  background: url(../images/facebook_inactive.png) no-repeat;
+  &:hover {
+    background: url(../images/facebook.png) no-repeat;
+  }
+
+}
+
+.twitter {
+  margin-right: 10px;
+  background: url(../images/twitter_inactive.png) no-repeat;
+  &:hover {
+    background: url(../images/twitter.png) no-repeat;
+  }
+}
+
+.google {
+  margin-right: 10px;
+  background: url(../images/google_inactive.png) no-repeat;
+  &:hover {
+    background: url(../images/google.png) no-repeat;
+  }
+}
+
+.rss {
+  background: url(../images/rss_inactive.png) no-repeat;
+  &:hover {
+    background: url(../images/rss.png) no-repeat;
+  }
+}
+
+//***Search Form Styles***//
+#reg_form {
+  float: left;
+  border-top: 1px solid @graySearchFormBorder;
+  border-bottom: 1px solid @graySearchFormBorder;
+  padding-top: 20px;
+  margin-bottom: 10px;
+  .box-sizing(border-box);
+}
+
+.reg-form-container {
+  margin-top: 10px;
+}
+
+.reg-form-instruct {
+  font-size: @fontSizeBelowLarge;
+  line-height: 35px;
+  font-weight: 300;
+}
+
+.reg-form-title {
+  font-size: @fontSizeMid;
+  font-weight: 500;
+}
+
+.reg-form-input {
+  float: left !important;
+}
+
+.reg-form-input-content {
+  padding-bottom: 30px;
+}
+
+.password-title {
+  float: left;
+  width: 100%;
+  font-weight: 300;
+}
+
+.input-title {
+  font-weight: 300;
+}
+
+.signin-social-btns {
+  float: left;
+  border-bottom: 1px solid #DFDFDF;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.cpl-arrow {
+}
+
+.cpl-arrow-img {
+  padding: 10px 0px;
+}
+
+.sign-social-btns {
+  float: right;
+  position: relative;
+  z-index: 1;
+  right: -50%;
+  margin-top: 10px;
+  @media only screen and (max-width: 767px) {
+    width: auto;
+  }
+}
+
+.sign-social-btns a {
+  width: 56px;
+  height: 57px;
+  float: left;
+  display: block;
+  margin-right: 10px;
+  @media only screen and (max-width: 767px) {
+    margin-right: 5px !important;
+  }
+}
+
+.sign-linkedin {
+  background: url(../images/sign_linkedin.png) no-repeat;
+}
+
+.sign-facebook {
+  background: url(../images/sign_facebook.png) no-repeat;
+}
+
+.sign-google {
+  background: url(../images/sign_google.png) no-repeat;
+}
+
+.sign-twitter {
+  background: url(../images/sign_twitter.png) no-repeat;
+}
+
+.reg-form-left {
+  float: left;
+  margin-left: 0 !important;
+}
+
+.reg-form-right {
+  float: right !important;
+  margin-bottom: 20px;
+}
+
+.sign-pics {
+  float: left;
+  margin-top: 15px;
+  @media only screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.item-pics-text {
+  float: right;
+}
+
+.item-pics-title {
+  font-weight: 500;
+  font-size: @fontSizeLarge;
+}
+
+.item-pics-instruct {
+  font-size: @fontSizeMid;
+  font-weight: 300;
+}
+
+.item-pics {
+  margin-top: 30px;
+}
+
+#reg_form_footer {
+  margin-top: 10px;
+  float: left;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.sign-pics div.span2 {
+  text-align: center;
+}
+
+#i_agree_btn {
+  font-weight: 300;
+  text-align: center;
+  border: 0;
+  outline: 0;
+  min-width: 150px;
+  min-height: 35px !important;
+  line-height: 26px;
+  .box-sizing(border-box);
+  font-size: @fontSizeLarge;
+  .styled-blue-btn();
+}
+
+.align-center-to-left {
+  position: relative;
+  right: 50%;
+  float: right;
+}
+
+.password-input {
+  @media only screen and (max-width: 767px) {
+    width: 100% !important;
+  }
+}
